@@ -1,0 +1,87 @@
+body {
+  background: blueviolet;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: 'RobotoMono', monospace;
+}
+
+.Container {
+border: 3px solid black;
+width: 235px;
+height: 320px;
+border-radius: 5px;
+background-color: cornsilk;
+overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 60px 60px 60px 60px;
+  grid-template-rows: 1fr 48px 48px 48px 48px 48px;
+  background-color: black;
+
+}
+
+#historic {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+#display {
+  color: azure;
+  grid-column: span 4;
+  grid-row: 2fr;
+  
+
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  font-size: 30px;
+  overflow: hidden;
+}
+
+button {
+/* background-color: crimson; */
+font-size: 20px;
+padding: 5px;
+border: none;
+border-right: solid 1px #8888;
+border-bottom: solid 1px #8888;
+outline: none; 
+}
+
+button:active {
+  background-color: #ccc;
+}
+
+.button_operacoes {
+  /* background-color: #fa8231; */
+  background-color: #fa8231;
+  color: #FFF;
+  padding: 10px;
+}
+
+#signal {
+  position: absolute; 
+  color: #FFF;
+  /* border: 3px solid red; */
+  margin: 50px 0px 0px 0px; 
+}
+
+/*btn op*/
+
+.btn_acao {
+  background-color: ;
+}
+
+@media  (max-width: 500px) {
+  body {
+    position: flex;
+    border: 3px solid red;
+    width: 50%;
+    height: 50%; 
+  }
+
+}
