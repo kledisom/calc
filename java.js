@@ -2,15 +2,30 @@ $(document).ready( function(){
 
    var v1, v2, op;
 
+   $("#display").html('0'); //Display já inicia com o valor 0.
+
+   //Eventos relacionados ao j_button.
+
   $(".j_button").click( function(){
-    $("#display").html($("#display").html() + $(this).html()); 
+    if ($("#display").html() == 0 ) {   // Relação com o botão clean.
+      $("#display").html('');      
+    }
+    
+      $("#display").html($("#display").html() + $(this).html());    
+
   });
+
+  //Ponto separador.
   
+  $(".separate").click( function(){
+     $("#display").html($("#display").html() + '.' );
+  });
+
  //CLEAN FUNCTION
 
   $("#toClean").click( function(){       // <-- Está função zera a o display e a label.
     if ($("#display").html() != '' || $("#signal").html()){
-      $("#display").html('');
+      $("#display").html('0');
       $("#signal").html('');      
     }
   });
@@ -99,15 +114,37 @@ $(document).ready( function(){
 
         var valor = $("#display").html();
 
-           valor = valor.replace(valor.charAt(capture - 1), ""); //Substitui o valor.
-
+          var valor = valor.replace(valor.charAt(capture - 1), ""); //Substitui o valor.
+            if ($("#display").html() != 0){
               $("#display").html(valor);
-                             
+            }                 
   });
 
+  //HISTORIC FUNCTION
+
   $("#historic").click( function(){
+
+        var result = $("#display").html();
+        var h1 = v1 + '+' + v2 + '=' + result;
+        var h2 = v1 + '-' + v2 + '=' + result;
+        var h3 = v1 + '*' + v2 + '=' + result;
+        var h4 = v1 + '/' + v2 + '=' + result;
+        
+
       if (op == 'add') {
-        $("#display").html(v1 + '+' + v2 + '=' + $("#display").html());
+         $("#display").html(h1);
+      } 
+      
+      else if(op == 'sub'){
+        $("#display").html(h2);
+      }
+
+      else if(op == 'multiply'){
+        $("#display").html(h3);
+      }
+
+      else if(op == 'division'){
+        $("#display").html(h4);
       }
 
   });
