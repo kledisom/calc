@@ -1,7 +1,7 @@
 body {
   background: blueviolet;
   display: flex;
-  height: 100vh;
+  height: 96vh;
   justify-content: center;
   align-items: center;
   font-family: 'RobotoMono', monospace;
@@ -67,21 +67,38 @@ button:active {
   position: absolute; 
   color: #FFF;
   /* border: 3px solid red; */
-  margin: 50px 0px 0px 0px; 
+  margin: 50px 0px 0px 5px; 
+  font-size: x-large;
 }
 
 /*btn op*/
 
 .btn_acao {
-  background-color: ;
+  background-color: 0;
 }
 
 @media  (max-width: 500px) {
   body {
-    position: flex;
-    border: 3px solid red;
-    width: 50%;
-    height: 50%; 
+    background: blueviolet;
+    display: flex;
+    height: 96vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'RobotoMono', monospace;
+  }
+
+  .Container {
+    border: 3px solid black;
+    width: 335px;
+    height: 420px;
+    border-radius: 5px;
+    background-color: cornsilk;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 85px 85px 85px 85px;
+    grid-template-rows: 1fr 65px 65px 65px 65px 65px;
+    background-color: black;
   }
 
 }
