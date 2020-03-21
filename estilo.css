@@ -77,10 +77,11 @@ button:active {
   background-color: 0;
 }
 
-@media  (max-width: 320px) {
+@media  (max-width: 500px) {
   body {
     background: blueviolet;
     display: flex;
+    width: auto;
     height: 96vh;
     justify-content: center;
     align-items: center;
